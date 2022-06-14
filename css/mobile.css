@@ -1,0 +1,61 @@
+/* Navigation */
+#main-nav .socials{
+    display: none;
+}
+
+#main-nav .container{
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+#main-nav ul, #main-nav .logo{
+    justify-self: center;
+}
+
+#main-nav ul li a{
+    padding: 0.5rem;
+    font-weight: normal;
+}
+
+/* Home Articles */
+.articles-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.articles-container > *:first-child{
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+.articles-container > *:last-child{
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+/* Smart Phone Styling */
+@media(max-width: 600px){
+     #showcase .showcase-container, #home-articles .articles-container,   #main-footer .footer-container, .page-container{
+         grid-template-columns: 1fr;
+     }
+
+    .footer-container > *:last-child{
+        grid-column: 1;
+        border-bottom: none;
+    }
+
+    #main-footer .footer-container > *:first-child, #main-footer .footer-container > *:nth-child(2), 
+    #main-footer .footer-container > *:nth-child(3){
+        padding-bottom: 2rem;
+        border-bottom: var(--light-grey) dotted 1px;
+    }
+
+    .page-container > *:first-child{
+        grid-row: 1;
+     }
+
+     .l-heading{
+         font-size: 2rem;
+         line-height: 2rem;
+     }
+ 
+}
